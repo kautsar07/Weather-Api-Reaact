@@ -1,76 +1,172 @@
 /*------navbar search-------*/
 
-.container{
-    max-width: 1100px;
-    margin: 0 auto;
-}
-.nav{
-    background: #fff;
-    width: 100%;
-}
-.wrap-search{
-    height: 70px;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-    width: 250px;
-    background: #5C6F80;
-    border-radius: 35px 0 0 0;
-    gap: 0;
-}
-.search-open, .search-close{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background: #97D5C8;
-    height: 40px;
-    width: 25px;
-    padding: 0 8px;
-    border-radius: 30px;
+.container {
+  max-width: 1100px;
+  margin: 25px auto;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
 }
 
-.search-close{
-    border-radius: 30px 0 0 30px;
+.wrap-search {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  width: 250px;
+  border-radius: 35px 0 0 0;
+  gap: 0;
 }
-.icon-search{
-    color:#5C6F80;
-    cursor: pointer;
-    font-size: 20px;
-    /* transition: all ease 0.02s; */
+.search-open,
+.search-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #97d5c8;
+  height: 40px;
+  width: 25px;
+  padding: 0 8px;
+  border-radius: 30px;
 }
-.icon-search:hover{
-    font-size: 25px;
-    animation: icon-search ease 0.25s;
+
+.search-close {
+  border-radius: 30px 0 0 30px;
+}
+.icon-search-close,
+.icon-search-open {
+  color: #5c6f80;
+  cursor: pointer;
+  font-size: 20px;
+  /* transition: all ease 0.02s; */
+}
+.icon-search-close {
+  font-size: 25px;
+}
+.icon-search-open:hover {
+  font-size: 25px;
+  animation: icon-search ease 0.25s;
 }
 @keyframes icon-search {
-    from{font-size: 20px;}
-    to{font-size: 25px;}
+  from {
+    font-size: 20px;
+  }
+  to {
+    font-size: 25px;
+  }
 }
-.wrap-field{
-    background: #97D5C8;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    padding-right: 10px;
-    border-radius: 0 30px 30px 0;
-    width: 100%;
-    animation: wrap-search linear 0.1s;
+.wrap-field {
+  background: #97d5c8;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-right: 35px;
+  border-radius: 0 30px 30px 0;
+  width: 100%;
+  animation: wrap-search linear 0.1s;
 }
-.wrap-field input{
-    height: 25px;
-    border-radius: 20px ;
-    border: transparent;
-    padding: 0 10px;
-    width: 100%;
-    animation: search linear 0.1s;
+.wrap-field input {
+  height: 25px;
+  border-radius: 20px;
+  border: transparent;
+  padding: 0 10px;
+  width: 100%;
+  animation: search linear 0.1s;
 }
 @keyframes search {
-    from {width: 0;}
-    to{width: 100%;}
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 @keyframes wrap-search {
-    from {width: 0;}
-    to{width: 100%;}
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
-
+.result {
+  width: 250px;
+  padding: 0 20px 30px 20px;
+  border-radius: 0 0 0 30px;
+  max-height: 1000px;
+}
+.wrap-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.img-weather {
+  width: 100%;
+}
+.wrap-results h1 {
+  color: #97d5c8;
+  font-size: 5rem;
+  margin: 0;
+  font-weight: 400;
+}
+.detail-result {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.date-time {
+  border-bottom: 1px solid #97d5c8;
+  margin-bottom: 10px;
+}
+.description{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.description p {
+    margin: 0;
+    font-size: 12px;
+}
+.img-city{
+    position: relative;
+    width: 100%;
+    border-radius: 45px;
+}
+.img-city img{
+    width: 100%;
+    border-radius: 45px;
+}
+.img-city p{
+    position: absolute;
+    bottom:0;
+    left: 12%;
+    color: #fff;
+    font-weight: 600;
+    font-size: 25px;
+    opacity: 0.7;
+}
+.wrap-main{
+    display: flex;
+    width: 100%;
+    height: 800px;
+}
+.left{
+    width: fit-content;
+    height: 100%;
+    background: #5c6f80;
+    border-radius: 30px 0 0 30px;
+}
+.right{
+    width: 100%;
+    height: 100%;
+    background: #c4c4c4;
+    border-radius:0 30px 30px 0;
+}
+.wrap-navResult{
+    
+    
+}
