@@ -4,12 +4,11 @@ import { BiSearchAlt } from "react-icons/bi";
 
 export default function NavbarSearch() {
   const [field, setField] = useState(false);
-  const [cityName, setCityName] = useState("Jakarta");
   const [value, setValue] = useState("");
 
   const handleSearch = (e) => {
     e.preventDefault();
-    setCityName(value);
+    // setCityName(value);
   };
   return (
     <div className="wrap-search">

@@ -6,28 +6,28 @@ import { BiCloudLightRain, BiCloudSnow } from "react-icons/bi";
 
 export default function ResultsSearch({ cityName }) {
   const [weathers, setWeather] = useState([]);
-  // const loadWeatherCity = async () => {
-  //   try {
-  //     const weatherCity = await axios.get(
-  //       authConfig.baseUrl + `weather?q=${cityName}&appid=` + authConfig.ApiKey
-  //     );
-  //     setWeather(weatherCity.data);
+  const loadWeatherCity = async () => {
+    try {
+      const weatherCity = await axios.get(
+        authConfig.baseUrl + `weather?q=${cityName}&appid=` + authConfig.ApiKey
+      );
+      setWeather(weatherCity.data);
 
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // };
-  // useEffect(() => {
-  //   loadWeatherCity();
-  // }, [weathers]);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  useEffect(() => {
+    loadWeatherCity();
+  }, [weathers]);
   return (
     <div className="result">
       <div className="wrap-results">
-        {/* {weathers.weather&&weathers.weather.map((item) => (
+        {weathers.weather&&weathers.weather.map((item) => (
         <img src={authConfig.iconUrl+item.icon+'@2x.png'} alt="" />
-      ))} */}
+      ))}
         {/* <img src={logo} alt="" className="img-weather" /> */}
-        <BiCloudSnow size={"100%"} color={"#fff"} />
+        {/* <BiCloudSnow size={"100%"} color={"#fff"} /> */}
         <h1>12°C</h1>
       </div>
       <div className="detail-result">
